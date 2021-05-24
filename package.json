@@ -2,15 +2,20 @@
   "name": "wetbue",
   "version": "1.0.0",
   "description": "The best way to watch videos.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chae-Mingi/wetube-2021.git"
+  },
+  "scripts": {
+    "win": "node index.js"
   },
   "author": "Mingi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Chae-Mingi/wetube-2021/issues"
   },
-  "homepage": "https://github.com/Chae-Mingi/wetube-2021#readme"
+  "homepage": "https://github.com/Chae-Mingi/wetube-2021#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

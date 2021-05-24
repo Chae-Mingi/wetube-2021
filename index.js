@@ -1,1 +1,1 @@
-console.log("Hello!Mingi")
+console.log("Hello!Mingi");
