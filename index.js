@@ -1,1 +1,3 @@
-console.log("Hello!Mingi");
+const express = require("express");
+
+const app = express();
