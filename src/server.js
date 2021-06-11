@@ -4,6 +4,7 @@ import session from "express-session";
 import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
+import { loacalsMiddleware } from "./middlewares";
 
 
 
@@ -21,13 +22,7 @@ app.use(
         saveUninitialized: true,
     })
 );
-
-app.use((req, res, next) => {
-    req.sessionStore.all((eroor, sessions) => {
-        console.log(sessions);
-        next();
-    });
-});
+app.use(loacalsMiddleware)
 
 app.use("/", rootRouter);
 app.use("/videos", videoRouter);
