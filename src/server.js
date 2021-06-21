@@ -23,7 +23,7 @@ app.use(
   })
 );
 app.use(loacalsMiddleware);
-
+app.use("/uploads", express.static("uploads"));
 app.use("/", rootRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
