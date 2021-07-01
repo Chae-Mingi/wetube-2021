@@ -16,6 +16,8 @@
 @import "./screens/search.scss";
 @import "./screens/profile.scss";
 @import "./screens/edit-profile.scss";
+@import "./screens/upload.scss";
+@import "./screens/watch.scss";
 
 // Defaults
 a {
@@ -38,7 +40,7 @@ main {
 }
 
 @keyframes goAway {
-  form {
+  from {
     transform: none;
     opacity: 1;
   }
