@@ -1,6 +1,6 @@
 import multer from "multer";
 
-export const loacalsMiddleware = (req, res, next) => {
+export const localsMiddleware = (req, res, next) => {
   res.locals.loggedIn = Boolean(req.session.loggedIn);
   res.locals.siteName = "Wetube";
   res.locals.loggedInUser = req.session.user || {};
@@ -9,9 +9,9 @@ export const loacalsMiddleware = (req, res, next) => {
 
 export const protectorMiddleware = (req, res, next) => {
   if (req.session.loggedIn) {
-    next();
+    return next();
   } else {
-    req.flash("error", "Log in first");
+    req.flash("error", "Log in first.");
     return res.redirect("/login");
   }
 };
@@ -28,7 +28,7 @@ export const publicOnlyMiddleware = (req, res, next) => {
 export const avatarUpload = multer({
   dest: "uploads/avatars/",
   limits: {
-    fileSize: 300000,
+    fileSize: 3000000,
   },
 });
 export const videoUpload = multer({
